@@ -1,8 +1,13 @@
 import { useEffect } from 'react';
-
+import Hero from './components/Hero';
+import Footer from './components/layout/Footer';
+import Header from './components/layout/Header';
 function App() {
-  const { VITE_FUNDRAISINGBOX_HASH, VITE_FUNDRAISINGBOX_SANDBOX, VITE_TEST_MODE } =
-    import.meta.env;
+  const {
+    VITE_FUNDRAISINGBOX_HASH,
+    VITE_FUNDRAISINGBOX_SANDBOX,
+    VITE_TEST_MODE,
+  } = import.meta.env;
 
   const searchParams = new URLSearchParams(window.location.search);
   const amount = searchParams.get('amount');
@@ -42,21 +47,32 @@ function App() {
   }, [VITE_FUNDRAISINGBOX_HASH, VITE_FUNDRAISINGBOX_SANDBOX, amount, testMode]);
 
   return (
-    <main>
-      <div id="fbIframeDiv"></div>
-      <noscript>Bitte Javascript aktivieren</noscript>
-      <a
-        rel="noreferrer noopener"
-        target="_blank"
-        href="https://www.fundraisingbox.com/?utm_source=donation_form"
-      >
-        <img
-          style={{ border: '0 !important' }}
-          src="https://secure.fundraisingbox.com/images/FundraisingBox-Logo-Widget.png"
-          alt="FundraisingBox Logo"
-        />
-      </a>
-    </main>
+    <div className="flex h-screen flex-col bg-background">
+      <Header />
+      <main className="container mx-auto max-w-7xl flex-1 overflow-hidden">
+        <div className="grid h-full grid-cols-1 md:grid-cols-2">
+          <Hero />
+          <section
+            className={`min-h-0 overflow-y-auto bg-white pt-10 pb-0 ${testMode ? 'md:pb-35' : 'md:pb-30'}`}
+          >
+            <div id="fbIframeDiv"></div>
+            <noscript>Bitte Javascript aktivieren</noscript>
+            <a
+              className="absolute right-5 bottom-25"
+              rel="noreferrer noopener"
+              target="_blank"
+              href="https://www.fundraisingbox.com/?utm_source=donation_form"
+            >
+              <img
+                src="https://secure.fundraisingbox.com/images/FundraisingBox-Logo-Widget.png"
+                alt="FundraisingBox Logo"
+              />
+            </a>
+          </section>
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
