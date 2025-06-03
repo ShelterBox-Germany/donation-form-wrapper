@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="bg-primary">
-      <div className="container mx-auto max-w-7xl px-4 py-8 text-white">
+      <div className="container mx-auto max-w-7xl h-24 px-4 py-8 text-white">
         <div className="flex items-center justify-between">
           <p>© {new Date().getFullYear()} ShelterBox Deutschland e.V.</p>
           <p>
