@@ -50,15 +50,15 @@ function App() {
     <div className="flex h-screen flex-col bg-background">
       <Header />
       <main className="container mx-auto max-w-7xl flex-1 overflow-hidden">
-        <div className="grid h-full grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           <Hero />
           <section
-            className={`min-h-0 overflow-y-auto bg-white pt-10 pb-0 ${testMode ? 'md:pb-35' : 'md:pb-30'}`}
+            className={`main-content-height overflow-y-auto bg-white pt-10 pb-0`}
           >
             <div id="fbIframeDiv"></div>
             <noscript>Bitte Javascript aktivieren</noscript>
             <a
-              className="absolute right-5 bottom-25"
+              className="absolute right-5 bottom-25 md:right-5"
               rel="noreferrer noopener"
               target="_blank"
               href="https://www.fundraisingbox.com/?utm_source=donation_form"

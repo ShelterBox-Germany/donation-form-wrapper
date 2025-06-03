@@ -2,7 +2,7 @@ const Header = () => {
   return (
     <header>
       <nav className="bg-primary">
-        <div className="container mx-auto max-w-7xl px-4 py-8 text-white xl:px-0">
+        <div className="container mx-auto h-24 max-w-7xl px-4 py-8 text-white xl:px-0">
           <div className="flex items-center justify-between">
             <img src="/site-logo-white.svg" alt="ShelterBox" />
             <div className="flex items-center gap-4">
