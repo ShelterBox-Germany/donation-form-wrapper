@@ -7,9 +7,9 @@ const Header = () => {
             <a href="https://www.shelterbox.de/" target="_self" rel="noopener noreferrer">
               <img src="/site-logo-white.svg" alt="ShelterBox" />
             </a>
-            <div className="flex items-center gap-4">
-              <img src="/lock.svg" alt="Lock" className="h-6 w-6" />
-              <h1 className="text-normal md:text-xl">Sicheres spenden</h1>
+            <div className="flex items-center gap-2.5 rounded-full bg-white/10 px-4 py-2">
+              <img src="/lock.svg" alt="Lock" className="h-5 w-5" />
+              <span className="text-sm font-medium md:text-base">Sicheres Spenden</span>
             </div>
           </div>
         </div>
