@@ -1,4 +1,7 @@
 const Footer = () => {
+  const {
+    VITE_BASE_URL
+  } = import.meta.env;
   return (
     <footer className="bg-primary">
       <div className="container mx-auto max-w-7xl h-24 px-4 py-8 text-white">
@@ -6,7 +9,7 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} ShelterBox Deutschland e.V.</p>
           <div className="flex items-center gap-4">
             <a
-              href="https://www.shelterbox.de/datenschutzerklaerung/"
+              href={`${VITE_BASE_URL}/datenschutz`}
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors hover:text-white/80"
@@ -15,7 +18,7 @@ const Footer = () => {
             </a>
             <span className="text-white/40">|</span>
             <a
-              href="https://www.shelterbox.de/impressum/"
+              href={`${VITE_BASE_URL}/impressum`}
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors hover:text-white/80"

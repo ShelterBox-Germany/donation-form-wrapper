@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-const SHELTERBOX_URL = 'https://www.shelterbox.de/';
 const DONATE_URL = 'https://spenden.shelterbox.de/';
 
 const SHARE_TEXT =
@@ -115,6 +114,9 @@ const CheckIcon = () => (
 );
 
 const ThankYou = () => {
+  const {
+    VITE_BASE_URL
+  } = import.meta.env;
   const [copied, setCopied] = useState(false);
 
   const params = new URLSearchParams(window.location.search);
@@ -276,7 +278,7 @@ const ThankYou = () => {
       </div>
 
       <a
-        href={SHELTERBOX_URL}
+        href={VITE_BASE_URL}
         className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:bg-primary/90 hover:shadow-xl"
       >
         <svg

@@ -1,10 +1,13 @@
 const Header = () => {
+  const {
+    VITE_BASE_URL
+  } = import.meta.env;
   return (
     <header>
       <nav className="bg-primary">
         <div className="container mx-auto h-24 max-w-7xl px-4 py-8 text-white xl:px-0">
           <div className="flex items-center justify-between">
-            <a href="https://www.shelterbox.de/" target="_self" rel="noopener noreferrer">
+            <a href={VITE_BASE_URL} target="_self" rel="noopener noreferrer">
               <img src="/site-logo-white.svg" alt="ShelterBox" />
             </a>
             <div className="flex items-center gap-2.5 rounded-full bg-white/10 px-4 py-2">
