@@ -92,7 +92,7 @@ function App() {
             </section>
           ) : (
             <section
-              className="main-content-height relative overflow-y-auto bg-white pt-10 pb-0 shadow-[-8px_0_24px_-12px_rgba(0,0,0,0.1)]"
+              className="main-content-height overflow-y-auto bg-white pt-10 pb-0 shadow-[-8px_0_24px_-12px_rgba(0,0,0,0.1)]"
             >
               {!formLoaded && <FormSkeleton />}
               <div
@@ -101,7 +101,7 @@ function App() {
               />
               <noscript>Bitte Javascript aktivieren</noscript>
               <a
-                className="absolute right-5 bottom-25 md:right-5"
+                className="mt-4 mb-6 flex justify-end px-5"
                 rel="noreferrer noopener"
                 target="_blank"
                 href="https://www.fundraisingbox.com/?utm_source=donation_form"
